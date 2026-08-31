@@ -6,15 +6,17 @@
   <meta name="theme-color" content="#0b1220">
   <title>FVR Consulting | AI, Data & Business Systems for Swiss SMEs</title>
   <meta name="description" content="FVR Consulting helps Swiss SMEs turn AI, data, ERP and automation into practical, measurable business outcomes.">
-  <link rel="canonical" href="https://fvrconsulting.ch/">
+  <link id="canonical-url" rel="canonical" href="https://fvrconsulting.ch/?lang=en">
   <link rel="alternate" hreflang="en" href="https://fvrconsulting.ch/?lang=en">
   <link rel="alternate" hreflang="fr" href="https://fvrconsulting.ch/?lang=fr">
   <link rel="alternate" hreflang="x-default" href="https://fvrconsulting.ch/">
   <link rel="icon" href="favre-logo.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="FVR Consulting | AI, Data & Business Systems">
-  <meta property="og:description" content="Practical AI, ERP, analytics and automation for Swiss SMEs—from opportunity to implementation.">
-  <meta property="og:url" content="https://fvrconsulting.ch/">
+  <meta id="og-title" property="og:title" content="FVR Consulting | AI, Data & Business Systems">
+  <meta id="og-description" property="og:description" content="Practical AI, ERP, analytics and automation for Swiss SMEs—from opportunity to implementation.">
+  <meta id="og-url" property="og:url" content="https://fvrconsulting.ch/?lang=en">
+  <meta id="og-locale" property="og:locale" content="en_CH">
+  <meta property="og:locale:alternate" content="fr_CH">
   <meta property="og:site_name" content="FVR Consulting">
   <style>
     :root{--ink:#0b1220;--blue:#2457e6;--sky:#eef4ff;--paper:#fff;--canvas:#f6f7f9;--line:#dde2e9;--muted:#5e6879;--radius:16px;--shadow:0 24px 70px rgba(11,18,32,.1)}
@@ -290,6 +292,12 @@
       document.documentElement.lang = lang;
       document.title = lang === "fr" ? "FVR Consulting | IA, données et systèmes de gestion pour PME suisses" : "FVR Consulting | AI, Data & Business Systems for Swiss SMEs";
       document.querySelector('meta[name="description"]').content = descriptions[lang];
+      const languageUrl = "https://fvrconsulting.ch/?lang=" + lang;
+      document.querySelector("#canonical-url").href = languageUrl;
+      document.querySelector("#og-url").content = languageUrl;
+      document.querySelector("#og-title").content = document.title;
+      document.querySelector("#og-description").content = descriptions[lang];
+      document.querySelector("#og-locale").content = lang === "fr" ? "fr_CH" : "en_CH";
       document.querySelectorAll("[data-lang]").forEach(button => {
         const active = button.dataset.lang === lang;
         button.classList.toggle("active", active);
