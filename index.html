@@ -66,9 +66,9 @@
     .trust .kicker{color:#8ca9ff}.trust h2{margin:0;font-size:clamp(30px,3.6vw,44px)}
     .trust-head p{color:#b7c0ce}
     .logos{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-    .logo-card{min-height:116px;display:flex;align-items:center;justify-content:center;padding:20px;background:#fff;border-radius:13px}
+    .logo-card{min-height:132px;display:flex;align-items:center;justify-content:center;padding:14px;background:#fff;border-radius:13px}
     .logo-card.featured{grid-column:span 2}
-    .logo-card img{width:100%;height:62px;object-fit:contain}.logo-card.featured img{height:72px}
+    .logo-card img{width:100%;height:86px;object-fit:contain}.logo-card.featured img{height:92px}
     .partner-note{margin-top:17px;color:#8f9aab;font-size:11px}
     .services,.approach{background:var(--canvas)}
     .section-head{display:grid;grid-template-columns:1fr .8fr;align-items:end;gap:60px;margin-bottom:52px}
@@ -113,7 +113,7 @@
     .footer{display:flex;justify-content:space-between;gap:28px}.footer a{color:#c4cad3;text-decoration:none}
     :focus-visible{outline:3px solid #7da2ff;outline-offset:3px}
     @media(max-width:980px){.hero-grid,.about-grid{grid-template-columns:1fr}.hero-grid{gap:54px}.hero-panel{max-width:620px}.logos{grid-template-columns:repeat(4,1fr)}.experience-grid{grid-template-columns:1fr 1fr}.approach-layout{grid-template-columns:1fr;gap:48px}.approach-copy{position:static}}
-    @media(max-width:760px){.container{width:calc(100% - 36px)}.nav{min-height:68px}.nav-links a:not(.nav-cta){display:none}.hero{padding:74px 0 70px;background-size:34px 34px,34px 34px,auto,auto}h1{font-size:clamp(44px,13vw,60px)}.hero-copy{font-size:18px}section{padding:78px 0}.trust-head,.section-head{grid-template-columns:1fr;gap:22px}.logos{grid-template-columns:1fr 1fr}.logo-card.featured{grid-column:span 1}.logo-card,.logo-card.featured{min-height:104px}.logo-card img,.logo-card.featured img{height:57px}.service-grid,.experience-grid{grid-template-columns:1fr}.service{min-height:290px;padding:30px}.credentials,.about-points{grid-template-columns:1fr}.contact-box{padding:48px 28px;border-radius:18px}.footer{flex-direction:column;gap:8px}}
+    @media(max-width:760px){.container{width:calc(100% - 36px)}.nav{min-height:68px}.nav-links a:not(.nav-cta){display:none}.hero{padding:74px 0 70px;background-size:34px 34px,34px 34px,auto,auto}h1{font-size:clamp(44px,13vw,60px)}.hero-copy{font-size:18px}section{padding:78px 0}.trust-head,.section-head{grid-template-columns:1fr;gap:22px}.logos{grid-template-columns:1fr 1fr;gap:12px}.logo-card.featured{grid-column:span 1}.logo-card,.logo-card.featured{min-height:112px;padding:10px}.logo-card img,.logo-card.featured img{height:76px}.service-grid,.experience-grid{grid-template-columns:1fr}.service{min-height:290px;padding:30px}.credentials,.about-points{grid-template-columns:1fr}.contact-box{padding:48px 28px;border-radius:18px}.footer{flex-direction:column;gap:8px}}
     @media(max-width:760px){.brand-logo{width:42px;height:42px}.brand>span{display:none}.nav-actions{gap:8px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
   </style>
@@ -123,199 +123,83 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <nav aria-label="Main navigation">
+  <nav aria-label="Primary navigation">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="FVR Consulting home"><img class="brand-logo" src="favre-logo.png" alt=""><span>FVR <b>Consulting</b></span></a>
+      <a class="brand" href="#top"><img class="brand-logo" src="favre-logo.png" alt="FVR Consulting"><span>FVR <b>Consulting</b></span></a>
       <div class="nav-actions">
         <div class="nav-links">
-          <a href="#services" data-i18n="navServices">Services</a><a href="#experience" data-i18n="navExperience">Experience</a><a href="#approach" data-i18n="navApproach">Approach</a><a href="#about" data-i18n="navAbout">About</a><a class="nav-cta" href="#contact" data-i18n="navTalk">Let's talk</a>
+          <a href="#services" data-i18n="navServices">Services</a>
+          <a href="#experience" data-i18n="navExperience">Experience</a>
+          <a href="#approach" data-i18n="navApproach">Approach</a>
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a class="nav-cta" href="#contact" data-i18n="navContact">Let's talk</a>
         </div>
-        <div class="lang-switch" aria-label="Language">
-          <button type="button" data-lang="en" class="active" aria-pressed="true">EN</button>
-          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        <div class="lang-switch" aria-label="Language switcher">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="fr">FR</button>
         </div>
       </div>
     </div>
   </nav>
+
   <main id="main">
-    <header id="top" class="hero">
+    <section class="hero" id="top">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow" data-i18n="eyebrow">Swiss-based · Business-first technology</div>
-          <h1 data-i18n="heroTitle">Turn technology into <em>business value.</em></h1>
-          <p class="hero-copy" data-i18n="heroCopy">FVR Consulting helps Swiss SMEs turn AI, data and business systems into practical results—from identifying the right opportunity to implementation and adoption.</p>
-          <div class="buttons"><a class="button" href="#contact" data-i18n="discuss">Discuss your project</a><a class="button alt" href="#services" data-i18n="explore">Explore our services</a></div>
+          <div class="eyebrow" data-i18n="heroEyebrow">AI, data & business systems for Swiss SMEs</div>
+          <h1 data-i18n="heroTitle">Turn technology into <em>measurable business value.</em></h1>
+          <p class="hero-copy" data-i18n="heroCopy">FVR Consulting helps Swiss SMEs design and implement practical solutions across AI, ERP, analytics and automation—with a strong focus on business outcomes, adoption and execution.</p>
+          <div class="buttons"><a class="button" href="#contact" data-i18n="heroCta1">Discuss your project</a><a class="button alt" href="#services" data-i18n="heroCta2">Explore services</a></div>
         </div>
-        <aside class="hero-panel" aria-label="What FVR Consulting delivers">
-          <div class="panel-head" data-i18n="panelHead">From opportunity to outcome</div>
+        <aside class="hero-panel">
+          <div class="panel-head" data-i18n="panelHead">From idea to operating solution</div>
           <ul class="value-list">
-            <li><span class="value-icon">01</span><span><strong data-i18n="value1Title">Clarify priorities</strong><small data-i18n="value1Copy">Focus investment on real business needs</small></span></li>
-            <li><span class="value-icon">02</span><span><strong data-i18n="value2Title">Connect the systems</strong><small data-i18n="value2Copy">Bring AI, ERP, data and workflows together</small></span></li>
-            <li><span class="value-icon">03</span><span><strong data-i18n="value3Title">Deliver pragmatically</strong><small data-i18n="value3Copy">Build solutions that fit your reality</small></span></li>
-            <li><span class="value-icon">04</span><span><strong data-i18n="value4Title">Measure what matters</strong><small data-i18n="value4Copy">Track adoption, efficiency and value</small></span></li>
+            <li><span class="value-icon">01</span><div><strong data-i18n="panel1Title">Prioritize the right use cases</strong><small data-i18n="panel1Text">Business value before technology.</small></div></li>
+            <li><span class="value-icon">02</span><div><strong data-i18n="panel2Title">Connect systems and data</strong><small data-i18n="panel2Text">ERP, BI, automation and AI working together.</small></div></li>
+            <li><span class="value-icon">03</span><div><strong data-i18n="panel3Title">Build for adoption</strong><small data-i18n="panel3Text">Simple processes, governance and measurable outcomes.</small></div></li>
           </ul>
         </aside>
       </div>
-    </header>
-    <section class="trust" aria-labelledby="partners-title">
+    </section>
+
+    <section class="trust">
       <div class="container">
         <div class="trust-head">
-          <div><div class="kicker" data-i18n="partnersKicker">Partners & technology ecosystem</div><h2 id="partners-title" data-i18n="partnersTitle">Recognized platforms. Integrated thinking.</h2></div>
-          <p data-i18n="partnersCopy">We combine business understanding with trusted AI, ERP, analytics and automation technologies—selecting the right tools for the problem, not the other way around.</p>
+          <div><div class="kicker" data-i18n="trustKicker">Partners & technology ecosystem</div><h2 data-i18n="trustTitle">Recognized platforms. Integrated thinking.</h2></div>
+          <p class="intro" data-i18n="trustCopy">We combine business understanding with proven AI, ERP, analytics and automation technologies—choosing the right tools for the problem, not the other way around.</p>
         </div>
         <div class="logos">
           <div class="logo-card featured"><img src="OpenAI_Select_Partner_Badge.svg" alt="OpenAI Select Partner"></div>
-          <div class="logo-card featured"><img src="microsoft_partner%20copy%203.webp" alt="Microsoft Solutions Partner"></div>
-          <div class="logo-card"><img src="n8n%20logo.png" alt="n8n"></div>
+          <div class="logo-card"><img src="microsoft_partner copy 3.webp" alt="Microsoft Solutions Partner"></div>
+          <div class="logo-card"><img src="n8n logo.png" alt="n8n"></div>
           <div class="logo-card"><img src="odoo-logo-png_seeklogo-320087.png" alt="Odoo"></div>
-          <div class="logo-card"><img src="power%20bi.jpg" alt="Microsoft Power BI"></div>
+          <div class="logo-card"><img src="power bi.jpg" alt="Power BI"></div>
           <div class="logo-card"><img src="supermetrics-logo-png_seeklogo-637761.png" alt="Supermetrics"></div>
         </div>
-        <p class="partner-note" data-i18n="partnerNote">Partner and product marks belong to their respective owners.</p>
+        <p class="partner-note" data-i18n="partnerNote">Partner and product trademarks belong to their respective owners.</p>
       </div>
     </section>
-    <section id="services" class="services">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="kicker" data-i18n="servicesKicker">What we do</div><h2 data-i18n="servicesTitle">Four capabilities. One business perspective.</h2></div>
-          <p class="intro" data-i18n="servicesIntro">Strategy is only valuable when it can be implemented. We connect business needs, technology choices, delivery and adoption.</p>
-        </div>
-        <div class="service-grid">
-          <article class="service"><div class="service-no">01 · AI</div><h3 data-i18n="service1Title">AI Strategy & Adoption</h3><p data-i18n="service1Copy">Identify valuable use cases, establish the right governance and move from experimentation to solutions people actually use.</p><ul class="tags"><li data-i18n="tagRoadmap">AI roadmap</li><li data-i18n="tagPortfolio">Use-case portfolio</li><li data-i18n="tagGenAI">Generative AI</li><li>Governance</li></ul></article>
-          <article class="service"><div class="service-no" data-i18n="systemsLabel">02 · SYSTEMS</div><h3 data-i18n="service2Title">ERP & Business Systems</h3><p data-i18n="service2Copy">Translate operations into coherent processes, system requirements and a pragmatic implementation roadmap, with Odoo at the core when it fits.</p><ul class="tags"><li>Odoo</li><li data-i18n="tagProcess">Process design</li><li data-i18n="tagMigration">Data migration</li><li>UAT</li></ul></article>
-          <article class="service"><div class="service-no" data-i18n="dataLabel">03 · DATA</div><h3 data-i18n="service3Title">Data & Performance</h3><p data-i18n="service3Copy">Build reliable management information by connecting data sources, clarifying definitions and designing decision-ready reporting.</p><ul class="tags"><li>Power BI</li><li data-i18n="tagModel">Data modelling</li><li data-i18n="tagDashboards">Dashboards</li><li data-i18n="tagDataGov">Data governance</li></ul></article>
-          <article class="service"><div class="service-no">04 · AUTOMATION</div><h3 data-i18n="service4Title">Automation & Integration</h3><p data-i18n="service4Copy">Reduce repetitive work and information gaps by connecting applications and orchestrating dependable, maintainable workflows.</p><ul class="tags"><li>n8n</li><li>APIs</li><li>Supermetrics</li><li data-i18n="tagWorkflow">Workflow design</li></ul></article>
-        </div>
-      </div>
-    </section>
-    <section id="experience">
-      <div class="container">
-        <div class="kicker" data-i18n="experienceKicker">Selected delivery experience</div>
-        <h2 data-i18n="experienceTitle">Experience where business and technology meet.</h2>
-        <p class="intro" data-i18n="experienceIntro">Practical work across AI governance, ERP transformation, analytics and automation—designed around operational realities rather than isolated technology projects.</p>
-        <div class="experience-grid">
-          <article class="experience"><div class="exp-type" data-i18n="exp1Type">AI operating model</div><h3 data-i18n="exp1Title">From scattered ideas to a managed AI portfolio</h3><p data-i18n="exp1Copy">Roadmap, opportunity assessment, governance, decision gates and value review for responsible AI adoption.</p></article>
-          <article class="experience"><div class="exp-type" data-i18n="exp2Type">ERP transformation</div><h3 data-i18n="exp2Title">Connecting processes, data and delivery</h3><p data-i18n="exp2Copy">Requirements, data governance, migration, testing and reporting rebuild around an integrated ERP environment.</p></article>
-          <article class="experience"><div class="exp-type" data-i18n="exp3Type">Data & automation</div><h3 data-i18n="exp3Title">Turning recurring work into dependable flows</h3><p data-i18n="exp3Copy">Automated data collection, workflow orchestration and decision-ready reporting across business applications.</p></article>
-        </div>
-      </div>
-    </section>
-    <section id="approach" class="approach">
-      <div class="container approach-layout">
-        <div class="approach-copy"><div class="kicker" data-i18n="approachKicker">How we work</div><h2 data-i18n="approachTitle">Structured enough to deliver. Lean enough to move.</h2><p class="intro" data-i18n="approachIntro">A clear path from the business question to a solution that works in everyday operations.</p></div>
-        <ol class="steps">
-          <li><span class="step-no">1</span><div><h3 data-i18n="step1Title">Assess</h3><p data-i18n="step1Copy">Understand the business problem, current processes, constraints and baseline.</p></div></li>
-          <li><span class="step-no">2</span><div><h3 data-i18n="step2Title">Prioritize</h3><p data-i18n="step2Copy">Compare value, feasibility, risk and readiness before committing resources.</p></div></li>
-          <li><span class="step-no">3</span><div><h3 data-i18n="step3Title">Implement</h3><p data-i18n="step3Copy">Configure, integrate and test the smallest coherent solution with the people who will use it.</p></div></li>
-          <li><span class="step-no">4</span><div><h3 data-i18n="step4Title">Adopt & measure</h3><p data-i18n="step4Copy">Support adoption, assign ownership and track whether the expected value materializes.</p></div></li>
-        </ol>
-      </div>
-    </section>
-    <section id="about">
-      <div class="container about-grid">
-        <aside class="profile">
-          <div class="profile-top"><div class="monogram"><img src="favre-logo.png" alt="Favre Consulting logo"></div><div><h3>Michel Favre</h3><div class="role" data-i18n="profileRole">Founder & Lead Consultant</div></div></div>
-          <p data-i18n="profileCopy">Business systems, data and AI specialist with experience bridging strategic priorities, operational processes and hands-on implementation.</p>
-          <ul class="credentials"><li data-i18n="credential1">MSc Data Analytics & Economics</li><li data-i18n="credential2">BSc Business Administration</li><li data-i18n="credential3">ERP & data transformation</li><li data-i18n="credential4">AI Business Specialist pathway</li></ul>
-        </aside>
-        <div class="about-copy">
-          <div class="kicker" data-i18n="aboutKicker">About FVR Consulting</div><h2 data-i18n="aboutTitle">Close to the business. Comfortable with the technology.</h2>
-          <p data-i18n="aboutCopy1">FVR Consulting is an independent Swiss consultancy for SMEs that need someone who can understand the business challenge, speak with technical partners and help carry the solution through to adoption.</p>
-          <p data-i18n="aboutCopy2">The focus is deliberately practical: appropriate technology, clear ownership and measurable outcomes—without unnecessary complexity.</p>
-          <div class="about-points"><div class="about-point"><strong data-i18n="point1Title">Business-first</strong><span data-i18n="point1Copy">Start with the decision or process, not the tool.</span></div><div class="about-point"><strong data-i18n="point2Title">End-to-end</strong><span data-i18n="point2Copy">Connect strategy, delivery, data and adoption.</span></div><div class="about-point"><strong data-i18n="point3Title">Independent</strong><span data-i18n="point3Copy">Select technology around the need and context.</span></div><div class="about-point"><strong data-i18n="point4Title">Swiss-based</strong><span data-i18n="point4Copy">Close to the realities of local SMEs.</span></div></div>
-        </div>
-      </div>
-    </section>
-    <section id="contact" class="contact">
-      <div class="container"><div class="contact-box"><div class="kicker" data-i18n="contactKicker">Start a conversation</div><h2 data-i18n="contactTitle">Have a business challenge that AI, data or better systems could solve?</h2><p data-i18n="contactCopy">Tell us where you are today and what you want to improve. The first conversation is about clarifying the opportunity—not selling a predefined solution.</p><a class="button" href="mailto:michel.favre@fvrconsulting.ch?subject=Project%20discussion%20%E2%80%94%20FVR%20Consulting" data-i18n="discuss">Discuss your project</a></div></div>
-    </section>
+
+    <section class="services" id="services"><div class="container"><div class="section-head"><div><div class="kicker" data-i18n="servicesKicker">What we do</div><h2 data-i18n="servicesTitle">Practical transformation across four connected areas.</h2></div><p class="intro" data-i18n="servicesCopy">From strategy and prioritization to implementation, data integration and adoption.</p></div><div class="service-grid"><article class="service"><div class="service-no">01 / AI</div><h3 data-i18n="service1Title">AI strategy & use cases</h3><p data-i18n="service1Text">Identify high-value AI opportunities, structure pilots, define governance and move from experimentation to useful solutions.</p><ul class="tags"><li>Roadmaps</li><li>Use cases</li><li>Governance</li><li>LLM pilots</li></ul></article><article class="service"><div class="service-no">02 / ERP</div><h3 data-i18n="service2Title">ERP & business systems</h3><p data-i18n="service2Text">Translate business requirements into robust processes, configuration, data models, migration and user adoption.</p><ul class="tags"><li>Odoo</li><li>Requirements</li><li>Migration</li><li>UAT</li></ul></article><article class="service"><div class="service-no">03 / DATA</div><h3 data-i18n="service3Title">Analytics & performance</h3><p data-i18n="service3Text">Build decision-ready reporting, data models and management dashboards that connect operational reality with financial performance.</p><ul class="tags"><li>Power BI</li><li>Power Query</li><li>SQL</li><li>KPI design</li></ul></article><article class="service"><div class="service-no">04 / AUTOMATION</div><h3 data-i18n="service4Title">Automation & integration</h3><p data-i18n="service4Text">Automate repetitive workflows and connect business tools to reduce manual work and improve reliability.</p><ul class="tags"><li>n8n</li><li>Power Automate</li><li>APIs</li><li>Workflows</li></ul></article></div></div></section>
+
+    <section id="experience"><div class="container"><div class="kicker" data-i18n="experienceKicker">Selected experience</div><h2 data-i18n="experienceTitle">Business-led delivery, not technology for its own sake.</h2><div class="experience-grid"><article class="experience"><div class="exp-type" data-i18n="exp1Type">Enterprise transformation</div><h3 data-i18n="exp1Title">ERP program & operating model</h3><p data-i18n="exp1Text">Co-leading cross-functional ERP work across finance, projects, CRM, data migration, governance, testing and reporting.</p></article><article class="experience"><div class="exp-type" data-i18n="exp2Type">AI decision support</div><h3 data-i18n="exp2Title">Document intelligence assessment</h3><p data-i18n="exp2Text">Compared AI solution scenarios, quantified three-year value and designed an evidence-based recommendation around Odoo.</p></article><article class="experience"><div class="exp-type" data-i18n="exp3Type">Analytics & automation</div><h3 data-i18n="exp3Title">Performance systems</h3><p data-i18n="exp3Text">Built BI, data and automation solutions to improve management visibility, reporting quality and recurring operational workflows.</p></article></div></div></section>
+
+    <section class="approach" id="approach"><div class="container approach-layout"><div class="approach-copy"><div class="kicker" data-i18n="approachKicker">How we work</div><h2 data-i18n="approachTitle">Structured enough to deliver. Lean enough to move.</h2><p class="intro" data-i18n="approachCopy">A pragmatic engagement model for SMEs: clarify the problem, test value quickly, then implement what works.</p></div><ol class="steps"><li><span class="step-no">1</span><div><h3 data-i18n="step1Title">Frame the business problem</h3><p data-i18n="step1Text">Clarify objectives, constraints, users, process pain points and what success should look like.</p></div></li><li><span class="step-no">2</span><div><h3 data-i18n="step2Title">Prioritize value</h3><p data-i18n="step2Text">Compare options using business impact, feasibility, risk, cost and time-to-value.</p></div></li><li><span class="step-no">3</span><div><h3 data-i18n="step3Title">Prototype or configure</h3><p data-i18n="step3Text">Build the smallest useful version that can validate assumptions with real users and real data.</p></div></li><li><span class="step-no">4</span><div><h3 data-i18n="step4Title">Integrate & govern</h3><p data-i18n="step4Text">Connect systems, define ownership, controls and operating processes so the solution can be maintained.</p></div></li><li><span class="step-no">5</span><div><h3 data-i18n="step5Title">Measure & improve</h3><p data-i18n="step5Text">Track adoption and outcomes, then iterate based on evidence rather than assumptions.</p></div></li></ol></div></section>
+
+    <section id="about"><div class="container about-grid"><div class="profile"><div class="profile-top"><div class="monogram"><img src="favre-logo.png" alt="FVR Consulting logo"></div><div><h3>Michel Favre</h3><div class="role" data-i18n="role">Founder · Business Systems, Data & AI</div></div></div><p data-i18n="profileText">Business-oriented technology consultant combining hands-on delivery with management, analytics and process expertise.</p><ul class="credentials"><li data-i18n="cred1">MSc Data Analytics & Economics</li><li data-i18n="cred2">BSc Business Administration</li><li data-i18n="cred3">AI Business Specialist — in progress</li><li data-i18n="cred4">Based in Vaud, Switzerland</li></ul></div><div class="about-copy"><div class="kicker" data-i18n="aboutKicker">About FVR Consulting</div><h2 data-i18n="aboutTitle">A bridge between business needs and technology execution.</h2><p data-i18n="aboutText1">FVR Consulting supports Swiss SMEs that need practical help navigating AI, ERP, data and automation without creating unnecessary complexity.</p><p data-i18n="aboutText2">The focus is on understanding how the business actually works, designing the right solution, and making sure it delivers measurable value after implementation.</p><div class="about-points"><div class="about-point"><strong data-i18n="point1Title">Business first</strong><span data-i18n="point1Text">Technology choices follow the use case and operating reality.</span></div><div class="about-point"><strong data-i18n="point2Title">Hands-on</strong><span data-i18n="point2Text">Strategy, configuration, analytics and automation can be connected in one engagement.</span></div><div class="about-point"><strong data-i18n="point3Title">Independent</strong><span data-i18n="point3Text">Recommendations are based on fit, value and feasibility.</span></div><div class="about-point"><strong data-i18n="point4Title">Swiss SME focus</strong><span data-i18n="point4Text">Pragmatic delivery adapted to smaller and mid-sized organizations.</span></div></div></div></div></section>
+
+    <section class="contact" id="contact"><div class="container"><div class="contact-box"><div class="kicker" data-i18n="contactKicker">Start a conversation</div><h2 data-i18n="contactTitle">Have an AI, ERP, data or automation challenge?</h2><p data-i18n="contactText">Share the situation, the tools you use today and what you want to improve. We can quickly identify whether there is a practical next step.</p><a class="button" href="mailto:michel.favre@fvrconsulting.ch">michel.favre@fvrconsulting.ch</a></div></div></section>
   </main>
-  <footer><div class="container footer"><div data-i18n="footer">© 2026 FVR Consulting · Switzerland</div><div><a href="mailto:michel.favre@fvrconsulting.ch">michel.favre@fvrconsulting.ch</a></div></div></footer>
+
+  <footer><div class="container footer"><span>© 2026 FVR Consulting</span><a href="mailto:michel.favre@fvrconsulting.ch">michel.favre@fvrconsulting.ch</a></div></footer>
+
   <script>
-    const french = {
-      navServices:"Services",navExperience:"Expérience",navApproach:"Approche",navAbout:"À propos",navTalk:"Discutons",
-      eyebrow:"Basé en Suisse · La technologie au service du métier",
-      heroTitle:"Transformez la technologie en <em>valeur métier.</em>",
-      heroCopy:"FVR Consulting aide les PME suisses à obtenir des résultats concrets grâce à l’IA, aux données et aux systèmes de gestion — de l’identification des opportunités à la mise en œuvre et à l’adoption.",
-      discuss:"Parler de votre projet",explore:"Découvrir nos services",panelHead:"De l’opportunité aux résultats",
-      value1Title:"Clarifier les priorités",value1Copy:"Concentrer les investissements sur les besoins réels",
-      value2Title:"Connecter les systèmes",value2Copy:"Faire converger IA, ERP, données et workflows",
-      value3Title:"Mettre en œuvre avec pragmatisme",value3Copy:"Construire des solutions adaptées à votre réalité",
-      value4Title:"Mesurer ce qui compte",value4Copy:"Suivre l’adoption, l’efficacité et la valeur",
-      partnersKicker:"Partenaires et écosystème technologique",partnersTitle:"Des plateformes reconnues. Une vision intégrée.",
-      partnersCopy:"Nous associons compréhension métier et technologies éprouvées en IA, ERP, analytique et automatisation — en choisissant les bons outils pour le problème, et non l’inverse.",
-      partnerNote:"Les marques partenaires et produits appartiennent à leurs propriétaires respectifs.",
-      servicesKicker:"Nos services",servicesTitle:"Quatre expertises. Une même vision métier.",
-      servicesIntro:"Une stratégie n’a de valeur que si elle peut être mise en œuvre. Nous relions besoins métier, choix technologiques, réalisation et adoption.",
-      service1Title:"Stratégie IA et adoption",service1Copy:"Identifier les cas d’usage à forte valeur, mettre en place une gouvernance adaptée et passer de l’expérimentation à des solutions réellement utilisées.",
-      tagRoadmap:"Feuille de route IA",tagPortfolio:"Portefeuille de cas d’usage",tagGenAI:"IA générative",
-      systemsLabel:"02 · SYSTÈMES",service2Title:"ERP et systèmes de gestion",service2Copy:"Traduire les opérations en processus cohérents, exigences fonctionnelles et feuille de route pragmatique, avec Odoo au cœur de la solution lorsqu’il est pertinent.",
-      tagProcess:"Conception des processus",tagMigration:"Migration des données",
-      dataLabel:"03 · DONNÉES",service3Title:"Données et performance",service3Copy:"Produire une information de gestion fiable en connectant les sources, en clarifiant les définitions et en créant des reportings utiles à la décision.",
-      tagModel:"Modélisation des données",tagDashboards:"Tableaux de bord",tagDataGov:"Gouvernance des données",
-      service4Title:"Automatisation et intégration",service4Copy:"Réduire les tâches répétitives et les ruptures d’information en connectant les applications au moyen de workflows fiables et maintenables.",tagWorkflow:"Conception de workflows",
-      experienceKicker:"Expériences sélectionnées",experienceTitle:"Une expérience à l’intersection du métier et de la technologie.",
-      experienceIntro:"Des réalisations concrètes en gouvernance IA, transformation ERP, analytique et automatisation — pensées autour des réalités opérationnelles plutôt que comme des projets technologiques isolés.",
-      exp1Type:"Modèle opérationnel IA",exp1Title:"Passer d’idées dispersées à un portefeuille IA piloté",exp1Copy:"Feuille de route, évaluation des opportunités, gouvernance, décisions et suivi de la valeur pour une adoption responsable de l’IA.",
-      exp2Type:"Transformation ERP",exp2Title:"Relier processus, données et exécution",exp2Copy:"Exigences, gouvernance des données, migration, tests et reconstruction du reporting autour d’un environnement ERP intégré.",
-      exp3Type:"Données et automatisation",exp3Title:"Transformer les tâches récurrentes en flux fiables",exp3Copy:"Collecte automatisée des données, orchestration des workflows et reporting orienté décision à travers les applications métier.",
-      approachKicker:"Notre approche",approachTitle:"Assez structurée pour livrer. Assez agile pour avancer.",approachIntro:"Un chemin clair entre la question métier et une solution efficace dans les opérations quotidiennes.",
-      step1Title:"Évaluer",step1Copy:"Comprendre le problème métier, les processus actuels, les contraintes et la situation de référence.",
-      step2Title:"Prioriser",step2Copy:"Comparer la valeur, la faisabilité, les risques et le niveau de préparation avant d’engager des ressources.",
-      step3Title:"Mettre en œuvre",step3Copy:"Configurer, intégrer et tester la plus petite solution cohérente avec les personnes qui l’utiliseront.",
-      step4Title:"Faire adopter et mesurer",step4Copy:"Soutenir l’adoption, attribuer les responsabilités et vérifier que la valeur attendue se concrétise.",
-      profileRole:"Fondateur et consultant principal",profileCopy:"Spécialiste des systèmes de gestion, des données et de l’IA, avec une expérience reliant priorités stratégiques, processus opérationnels et mise en œuvre.",
-      credential1:"Master en Data Analytics & Economics",credential2:"Bachelor en économie d’entreprise",credential3:"Transformation ERP et data",credential4:"Parcours AI Business Specialist",
-      aboutKicker:"À propos de FVR Consulting",aboutTitle:"Proche du métier. À l’aise avec la technologie.",
-      aboutCopy1:"FVR Consulting est un cabinet suisse indépendant destiné aux PME qui recherchent un interlocuteur capable de comprendre leurs enjeux, de dialoguer avec les partenaires techniques et d’accompagner la solution jusqu’à son adoption.",
-      aboutCopy2:"Notre approche est volontairement pragmatique : une technologie appropriée, des responsabilités claires et des résultats mesurables — sans complexité inutile.",
-      point1Title:"Orienté métier",point1Copy:"Partir de la décision ou du processus, pas de l’outil.",
-      point2Title:"De bout en bout",point2Copy:"Relier stratégie, réalisation, données et adoption.",
-      point3Title:"Indépendant",point3Copy:"Choisir la technologie selon le besoin et le contexte.",
-      point4Title:"Basé en Suisse",point4Copy:"Au plus près des réalités des PME locales.",
-      contactKicker:"Démarrons la discussion",contactTitle:"Vous avez un enjeu que l’IA, les données ou de meilleurs systèmes pourraient résoudre ?",
-      contactCopy:"Expliquez-nous votre situation actuelle et ce que vous souhaitez améliorer. Le premier échange sert à clarifier l’opportunité — pas à vendre une solution prédéfinie.",
-      footer:"© 2026 FVR Consulting · Suisse"
+    const translations={
+      en:{navServices:'Services',navExperience:'Experience',navApproach:'Approach',navAbout:'About',navContact:"Let's talk",heroEyebrow:'AI, data & business systems for Swiss SMEs',heroTitle:'Turn technology into <em>measurable business value.</em>',heroCopy:'FVR Consulting helps Swiss SMEs design and implement practical solutions across AI, ERP, analytics and automation—with a strong focus on business outcomes, adoption and execution.',heroCta1:'Discuss your project',heroCta2:'Explore services',panelHead:'From idea to operating solution',panel1Title:'Prioritize the right use cases',panel1Text:'Business value before technology.',panel2Title:'Connect systems and data',panel2Text:'ERP, BI, automation and AI working together.',panel3Title:'Build for adoption',panel3Text:'Simple processes, governance and measurable outcomes.',trustKicker:'Partners & technology ecosystem',trustTitle:'Recognized platforms. Integrated thinking.',trustCopy:'We combine business understanding with proven AI, ERP, analytics and automation technologies—choosing the right tools for the problem, not the other way around.',partnerNote:'Partner and product trademarks belong to their respective owners.',servicesKicker:'What we do',servicesTitle:'Practical transformation across four connected areas.',servicesCopy:'From strategy and prioritization to implementation, data integration and adoption.',service1Title:'AI strategy & use cases',service1Text:'Identify high-value AI opportunities, structure pilots, define governance and move from experimentation to useful solutions.',service2Title:'ERP & business systems',service2Text:'Translate business requirements into robust processes, configuration, data models, migration and user adoption.',service3Title:'Analytics & performance',service3Text:'Build decision-ready reporting, data models and management dashboards that connect operational reality with financial performance.',service4Title:'Automation & integration',service4Text:'Automate repetitive workflows and connect business tools to reduce manual work and improve reliability.',experienceKicker:'Selected experience',experienceTitle:'Business-led delivery, not technology for its own sake.',exp1Type:'Enterprise transformation',exp1Title:'ERP program & operating model',exp1Text:'Co-leading cross-functional ERP work across finance, projects, CRM, data migration, governance, testing and reporting.',exp2Type:'AI decision support',exp2Title:'Document intelligence assessment',exp2Text:'Compared AI solution scenarios, quantified three-year value and designed an evidence-based recommendation around Odoo.',exp3Type:'Analytics & automation',exp3Title:'Performance systems',exp3Text:'Built BI, data and automation solutions to improve management visibility, reporting quality and recurring operational workflows.',approachKicker:'How we work',approachTitle:'Structured enough to deliver. Lean enough to move.',approachCopy:'A pragmatic engagement model for SMEs: clarify the problem, test value quickly, then implement what works.',step1Title:'Frame the business problem',step1Text:'Clarify objectives, constraints, users, process pain points and what success should look like.',step2Title:'Prioritize value',step2Text:'Compare options using business impact, feasibility, risk, cost and time-to-value.',step3Title:'Prototype or configure',step3Text:'Build the smallest useful version that can validate assumptions with real users and real data.',step4Title:'Integrate & govern',step4Text:'Connect systems, define ownership, controls and operating processes so the solution can be maintained.',step5Title:'Measure & improve',step5Text:'Track adoption and outcomes, then iterate based on evidence rather than assumptions.',role:'Founder · Business Systems, Data & AI',profileText:'Business-oriented technology consultant combining hands-on delivery with management, analytics and process expertise.',cred1:'MSc Data Analytics & Economics',cred2:'BSc Business Administration',cred3:'AI Business Specialist — in progress',cred4:'Based in Vaud, Switzerland',aboutKicker:'About FVR Consulting',aboutTitle:'A bridge between business needs and technology execution.',aboutText1:'FVR Consulting supports Swiss SMEs that need practical help navigating AI, ERP, data and automation without creating unnecessary complexity.',aboutText2:'The focus is on understanding how the business actually works, designing the right solution, and making sure it delivers measurable value after implementation.',point1Title:'Business first',point1Text:'Technology choices follow the use case and operating reality.',point2Title:'Hands-on',point2Text:'Strategy, configuration, analytics and automation can be connected in one engagement.',point3Title:'Independent',point3Text:'Recommendations are based on fit, value and feasibility.',point4Title:'Swiss SME focus',point4Text:'Pragmatic delivery adapted to smaller and mid-sized organizations.',contactKicker:'Start a conversation',contactTitle:'Have an AI, ERP, data or automation challenge?',contactText:'Share the situation, the tools you use today and what you want to improve. We can quickly identify whether there is a practical next step.'},
+      fr:{navServices:'Services',navExperience:'Expérience',navApproach:'Approche',navAbout:'À propos',navContact:'Discutons',heroEyebrow:'IA, data & systèmes de gestion pour PME suisses',heroTitle:'Transformez la technologie en <em>valeur métier mesurable.</em>',heroCopy:'FVR Consulting accompagne les PME suisses dans la conception et la mise en œuvre de solutions concrètes en IA, ERP, analytique et automatisation, avec un fort accent sur les résultats métier, l’adoption et l’exécution.',heroCta1:'Discuter de votre projet',heroCta2:'Découvrir les services',panelHead:'De l’idée à la solution opérationnelle',panel1Title:'Prioriser les bons cas d’usage',panel1Text:'La valeur métier avant la technologie.',panel2Title:'Connecter systèmes et données',panel2Text:'ERP, BI, automatisation et IA qui fonctionnent ensemble.',panel3Title:'Concevoir pour l’adoption',panel3Text:'Des processus simples, une gouvernance claire et des résultats mesurables.',trustKicker:'Partenaires et écosystème technologique',trustTitle:'Des plateformes reconnues. Une vision intégrée.',trustCopy:'Nous associons compréhension métier et technologies éprouvées en IA, ERP, analytique et automatisation — en choisissant les bons outils pour le problème, et non l’inverse.',partnerNote:'Les marques partenaires et produits appartiennent à leurs propriétaires respectifs.',servicesKicker:'Nos services',servicesTitle:'Une transformation pragmatique autour de quatre domaines connectés.',servicesCopy:'De la stratégie et de la priorisation à l’implémentation, l’intégration des données et l’adoption.',service1Title:'Stratégie IA & cas d’usage',service1Text:'Identifier les opportunités IA à forte valeur, structurer les pilotes, définir la gouvernance et passer de l’expérimentation à des solutions utiles.',service2Title:'ERP & systèmes de gestion',service2Text:'Traduire les besoins métier en processus robustes, configuration, modèles de données, migration et adoption utilisateur.',service3Title:'Analytique & performance',service3Text:'Construire des reportings, modèles de données et tableaux de bord de pilotage reliant réalité opérationnelle et performance financière.',service4Title:'Automatisation & intégration',service4Text:'Automatiser les tâches répétitives et connecter les outils métier afin de réduire le travail manuel et améliorer la fiabilité.',experienceKicker:'Expériences sélectionnées',experienceTitle:'Une exécution guidée par le métier, pas par la technologie.',exp1Type:'Transformation d’entreprise',exp1Title:'Programme ERP & modèle opérationnel',exp1Text:'Co-pilotage d’un programme ERP transverse couvrant finance, projets, CRM, migration de données, gouvernance, tests et reporting.',exp2Type:'Aide à la décision IA',exp2Title:'Évaluation de document intelligence',exp2Text:'Comparaison de scénarios IA, quantification de la valeur sur trois ans et recommandation structurée autour d’Odoo.',exp3Type:'Analytique & automatisation',exp3Title:'Systèmes de performance',exp3Text:'Mise en place de solutions BI, data et automatisation pour améliorer le pilotage, la qualité du reporting et les processus récurrents.',approachKicker:'Notre approche',approachTitle:'Assez structurés pour livrer. Assez agiles pour avancer.',approachCopy:'Une méthode pragmatique pour PME : clarifier le problème, tester rapidement la valeur, puis implémenter ce qui fonctionne.',step1Title:'Cadrer le problème métier',step1Text:'Clarifier les objectifs, contraintes, utilisateurs, points de friction et critères de succès.',step2Title:'Prioriser la valeur',step2Text:'Comparer les options selon l’impact métier, la faisabilité, le risque, le coût et le délai de création de valeur.',step3Title:'Prototyper ou configurer',step3Text:'Construire la plus petite version utile permettant de valider les hypothèses avec de vrais utilisateurs et de vraies données.',step4Title:'Intégrer & gouverner',step4Text:'Connecter les systèmes, définir les responsabilités, contrôles et processus opérationnels pour assurer la pérennité.',step5Title:'Mesurer & améliorer',step5Text:'Suivre l’adoption et les résultats, puis itérer sur la base de faits plutôt que d’hypothèses.',role:'Fondateur · Business Systems, Data & IA',profileText:'Consultant technologique orienté métier, combinant mise en œuvre concrète, management, analytique et expertise processus.',cred1:'MSc Data Analytics & Economics',cred2:'BSc Business Administration',cred3:'AI Business Specialist — en cours',cred4:'Basé dans le canton de Vaud, Suisse',aboutKicker:'À propos de FVR Consulting',aboutTitle:'Le lien entre les besoins métier et l’exécution technologique.',aboutText1:'FVR Consulting accompagne les PME suisses qui souhaitent avancer concrètement en IA, ERP, data et automatisation sans créer de complexité inutile.',aboutText2:'L’objectif est de comprendre le fonctionnement réel de l’entreprise, concevoir la bonne solution et s’assurer qu’elle crée une valeur mesurable après sa mise en œuvre.',point1Title:'Le métier d’abord',point1Text:'Les choix technologiques suivent le cas d’usage et la réalité opérationnelle.',point2Title:'Concret',point2Text:'Stratégie, configuration, analytique et automatisation peuvent être réunies dans un même accompagnement.',point3Title:'Indépendant',point3Text:'Les recommandations reposent sur l’adéquation, la valeur et la faisabilité.',point4Title:'Focus PME suisses',point4Text:'Une exécution pragmatique adaptée aux petites et moyennes organisations.',contactKicker:'Échangeons',contactTitle:'Un défi en IA, ERP, data ou automatisation ?',contactText:'Présentez votre situation, les outils utilisés aujourd’hui et ce que vous souhaitez améliorer. Nous pouvons rapidement identifier une prochaine étape concrète.'}
     };
-    const english = {};
-    document.querySelectorAll("[data-i18n]").forEach(el => english[el.dataset.i18n] = el.innerHTML);
-    const descriptions = {
-      en:"FVR Consulting helps Swiss SMEs turn AI, data, ERP and automation into practical, measurable business outcomes.",
-      fr:"FVR Consulting aide les PME suisses à transformer l’IA, les données, l’ERP et l’automatisation en résultats métier concrets et mesurables."
-    };
-    function setLanguage(lang) {
-      const content = lang === "fr" ? french : english;
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const value = content[el.dataset.i18n];
-        if (value !== undefined) el.innerHTML = value;
-      });
-      document.documentElement.lang = lang;
-      document.title = lang === "fr" ? "FVR Consulting | IA, données et systèmes de gestion pour PME suisses" : "FVR Consulting | AI, Data & Business Systems for Swiss SMEs";
-      document.querySelector('meta[name="description"]').content = descriptions[lang];
-      const languageUrl = "https://fvrconsulting.ch/?lang=" + lang;
-      document.querySelector("#canonical-url").href = languageUrl;
-      document.querySelector("#og-url").content = languageUrl;
-      document.querySelector("#og-title").content = document.title;
-      document.querySelector("#og-description").content = descriptions[lang];
-      document.querySelector("#og-locale").content = lang === "fr" ? "fr_CH" : "en_CH";
-      document.querySelectorAll("[data-lang]").forEach(button => {
-        const active = button.dataset.lang === lang;
-        button.classList.toggle("active", active);
-        button.setAttribute("aria-pressed", String(active));
-      });
-      const contact = document.querySelector('.contact-box a[href^="mailto:"]');
-      contact.href = "mailto:michel.favre@fvrconsulting.ch?subject=" + encodeURIComponent(lang === "fr" ? "Discussion de projet — FVR Consulting" : "Project discussion — FVR Consulting");
-      localStorage.setItem("fvr-language", lang);
-      const url = new URL(window.location);
-      url.searchParams.set("lang", lang);
-      history.replaceState({}, "", url);
-    }
-    document.querySelectorAll("[data-lang]").forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
-    const requestedLanguage = new URLSearchParams(location.search).get("lang");
-    const initialLanguage = requestedLanguage === "fr" || requestedLanguage === "en"
-      ? requestedLanguage
-      : localStorage.getItem("fvr-language") || (navigator.language.startsWith("fr") ? "fr" : "en");
-    setLanguage(initialLanguage);
+    function setLanguage(lang){const t=translations[lang]||translations.en;document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(t[key]!==undefined)el.innerHTML=t[key]});document.querySelectorAll('[data-lang]').forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));const isFr=lang==='fr';document.title=isFr?'FVR Consulting | IA, Data & Systèmes de gestion pour PME suisses':'FVR Consulting | AI, Data & Business Systems for Swiss SMEs';document.querySelector('meta[name="description"]').setAttribute('content',isFr?'FVR Consulting accompagne les PME suisses avec des solutions concrètes en IA, ERP, data, Power BI et automatisation.':'FVR Consulting helps Swiss SMEs turn AI, data, ERP and automation into practical, measurable business outcomes.');const url='https://fvrconsulting.ch/?lang='+lang;document.getElementById('canonical-url').href=url;document.getElementById('og-url').content=url;document.getElementById('og-locale').content=isFr?'fr_CH':'en_CH';document.getElementById('og-title').content=isFr?'FVR Consulting | IA, Data & Systèmes de gestion':'FVR Consulting | AI, Data & Business Systems';document.getElementById('og-description').content=isFr?'IA, ERP, analytique et automatisation pragmatiques pour PME suisses, de l’opportunité à la mise en œuvre.':'Practical AI, ERP, analytics and automation for Swiss SMEs—from opportunity to implementation.';localStorage.setItem('fvrLang',lang);history.replaceState(null,'','?lang='+lang+location.hash)}
+    const params=new URLSearchParams(location.search);const requested=params.get('lang');const saved=localStorage.getItem('fvrLang');setLanguage(requested==='fr'||requested==='en'?requested:(saved||((navigator.language||'').toLowerCase().startsWith('fr')?'fr':'en')));document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>setLanguage(btn.dataset.lang)));
   </script>
 </body>
 </html>
